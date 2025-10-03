@@ -15,177 +15,207 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-[#FFFDD0]">
-    <header>
-        <nav class="m-8 mx-auto max-w-4xl">
+    <header class="mb-10">
+        <nav class="hidden max-w-4xl m-8 mx-auto md:block">
             <div class="flex justify-between bg-[#F9E6B2] items-center rounded-4xl p-4 px-24">
-                <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="index.html">Beranda</a>
-                <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="menu.html">Produk</a>
-                <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="about.html">Tentang Kami</a>
-                <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="testimony.html">Testimoni</a>
-                <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="contact.html">Kontak</a>
-
+            <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="index.html">Beranda</a>
+            <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="menu.html">Produk</a>
+            <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="about.html">Tentang Kami</a>
+            <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="testimony.html">Testimoni</a>
+            <a class="text-xl text-[#5B0E04] font-bold transition transform hover:text-[#a43206] hover:-translate-y-1 duration-300" href="contact.html">Kontak</a>
             </div>
         </nav>
-        <section>
-            <div class="mx-auto max-w-4xl text-center mt-20">
-                <h1 class="text-5xl font-bold text-[#5B0E04] mb-6">Produk</h1>
-                <p class="text-xl text-[#5B0E04] mb-12">Mau makan apa hari ini?</p>
-                <a href="menu.html" class="inline-block bg-[#F9E6B2] text-[#5B0E04] font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:bg-[#a43206] hover:text-white hover:-translate-y-1 duration-300">Lihat Menu Kami</a>
+        <nav class="md:hidden w-full z-[1000] bg-transparent fixed top-0 left-0 right-0 p-4">
+            <div class="flex items-center justify-between bg-[#F9E6B2] rounded-4xl px-6 py-4">
+            <a href="index.html" class="text-lg font-bold text-[#5B0E04]">Joko n Chicken</a>
+            <button id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" 
+                class="flex flex-col items-center justify-center w-10 h-10 rounded-md focus:outline-none group">
+                <span class="block w-6 h-0.5 bg-[#5B0E04] transition-all duration-300 origin-center" id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-[#5B0E04] my-1 transition-all duration-300 origin-center" id="bar2"></span>
+                <span class="block w-6 h-0.5 bg-[#5B0E04] transition-all duration-300 origin-center" id="bar3"></span>
+            </button>
             </div>
-        </section>
+            <div id="mobile-menu" 
+                class="p-6 transition-all duration-300 scale-95 bg-[#F9E6B2] rounded-4xl shadow-lg opacity-0 pointer-events-none -z-10">
+            <div class="flex flex-col space-y-4 text-lg font-semibold text-[#5B0E04]">
+                <a href="index.html" class="flex items-center gap-2 hover:text-[#a43206]">
+                <i class="fas fa-home"></i><span>Beranda</span>
+                </a>
+                <a href="menu.html" class="flex items-center gap-2 hover:text-[#a43206]">
+                <i class="fas fa-utensils"></i><span>Produk</span>
+                </a>
+                <a href="about.html" class="flex items-center gap-2 hover:text-[#a43206]">
+                <i class="fas fa-users"></i><span>Tentang Kami</span>
+                </a>
+                <a href="testimony.html" class="flex items-center gap-2 hover:text-[#a43206]">
+                <i class="fas fa-comment-dots"></i><span>Testimoni</span>
+                </a>
+                <a href="contact.html" class="flex items-center gap-2 hover:text-[#a43206]">
+                <i class="fas fa-phone"></i><span>Kontak</span>
+                </a>
+            </div>
+            </div>
+        </nav>
     </header>
+    <section class="mt-40 md:mt-0">
+        <div class="max-w-4xl mx-auto mt-20 text-center">
+            <h1 class="text-5xl font-bold text-[#5B0E04] mb-6">Produk</h1>
+            <p class="text-xl text-[#5B0E04] mb-12">Mau makan apa hari ini?</p>
+            <a href="menu.html" class="inline-block bg-[#F9E6B2] text-[#5B0E04] font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:bg-[#a43206] hover:text-white hover:-translate-y-1 duration-300">Lihat Menu Kami</a>
+        </div>
+    </section>
     <section class="py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
+        <div class="grid max-w-6xl grid-cols-1 gap-10 px-4 mx-auto md:grid-cols-2">
             <div class="flex flex-col items-center">
-                <img src="image/menu/Nasi-Uduk-Ayam-Crispy.jpg" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/Nasi-Uduk-Ayam-Crispy.jpg" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Nasi Uduk Ayam Crispy</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Nasi uduk harum santan berpadu dengan ayam crispy keemasan yang gurih.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Nasi uduk harum santan berpadu dengan ayam crispy keemasan yang gurih.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/a208df7e2741b84bd428d460032f2232f1086fdf.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/a208df7e2741b84bd428d460032f2232f1086fdf.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Nasi Kuning Ayam Crispy</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Nasi kuning gurih beraroma rempah, disajikan dengan ayam crispy renyah di luar, lembut di dalam.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Nasi kuning gurih beraroma rempah, disajikan dengan ayam crispy renyah di luar, lembut di dalam.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/4abf438f9a3624bd240a926d2f19860bfe083ddd.png" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/4abf438f9a3624bd240a926d2f19860bfe083ddd.png" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Ayam Goreng Kecomberang</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Ayam goreng bumbu khas dipadu kecombrang yang segar dan wangi, memberi cita rasa unik.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Ayam goreng bumbu khas dipadu kecombrang yang segar dan wangi, memberi cita rasa unik.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/ayam-saus-mentega.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/ayam-saus-mentega.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Ayam Saus Mentaga</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Potongan ayam digoreng lalu ditumis dengan saus mentega manis-gurih yang menggugah selera.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Potongan ayam digoreng lalu ditumis dengan saus mentega manis-gurih yang menggugah selera.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/83fc5811048462db0612596f55643b470326e694.jpg" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/83fc5811048462db0612596f55643b470326e694.jpg" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Ayam Goreng Bawang Putih</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Ayam goreng gurih dengan taburan bawang putih goreng yang harum dan crunchy.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Ayam goreng gurih dengan taburan bawang putih goreng yang harum dan crunchy.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/4a403a67c5de639d4ccadc60339def9339013551.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/4a403a67c5de639d4ccadc60339def9339013551.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Kulit Ayam Crispy</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm"> kulit ayam goreng renyah, gurih, dan bikin nagih.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600"> kulit ayam goreng renyah, gurih, dan bikin nagih.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/3c969562bb0c415f4e4086631ac181838652a634.jpg" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/3c969562bb0c415f4e4086631ac181838652a634.jpg" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Perkedel Jagung</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Gorengan jagung manis gurih dengan tekstur renyah di luar, lembut di dalam.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Gorengan jagung manis gurih dengan tekstur renyah di luar, lembut di dalam.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/2110fa5ecb9c39ea53ce0ed838d3548015a7f50d.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/2110fa5ecb9c39ea53ce0ed838d3548015a7f50d.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Tahu Goreng Crispy</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Tahu goreng dengan balutan tepung renyah, cocok untuk lauk maupun camilan.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Tahu goreng dengan balutan tepung renyah, cocok untuk lauk maupun camilan.</p>
                 </div>
             </div>
         </div>
     </section>
     <section>
-            <div class="mx-auto max-w-4xl text-center mt-5">
+            <div class="max-w-4xl mx-auto mt-5 text-center">
                 <p class="text-xl text-[#5B0E04] mb-12 font-bold">Mau minum juga boleh!</p>
             </div>
     </section>
     <section class="py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
+        <div class="grid max-w-6xl grid-cols-1 gap-10 px-4 mx-auto md:grid-cols-2">
             <div class="flex flex-col items-center">
-                <img src="image/menu/fa778fa2aed43e4d6f3c67c372129d6ec011b2e3.png" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/fa778fa2aed43e4d6f3c67c372129d6ec011b2e3.png" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Teh Jawa</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Teh khas Jawa yang harum dengan rasa manis segar, disajikan dingin pelepas dahaga.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Teh khas Jawa yang harum dengan rasa manis segar, disajikan dingin pelepas dahaga.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/dc3c0227754540b928b36b9a17971df2f94b412f.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/dc3c0227754540b928b36b9a17971df2f94b412f.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Jeruk Peras</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Minuman jeruk segar asli yang diperas langsung, manis asam alami, sangat menyegarkan.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Minuman jeruk segar asli yang diperas langsung, manis asam alami, sangat menyegarkan.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/5ee79e3800d206a5d4bf3d5e320194e2768a3026.jpg" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/5ee79e3800d206a5d4bf3d5e320194e2768a3026.jpg" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Cendol Hijau</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Cendol hijau kenyal berpadu santan gurih dan gula aren manis legit.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Cendol hijau kenyal berpadu santan gurih dan gula aren manis legit.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/4e34620895b90a5e4406a240dc3133a54e615d9c.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/4e34620895b90a5e4406a240dc3133a54e615d9c.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Cincau Hitam</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Minuman segar berisi cincau hitam lembut dengan rasa manis ringan yang menyejukkan.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Minuman segar berisi cincau hitam lembut dengan rasa manis ringan yang menyejukkan.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/7605a56a71db60da11d7b73b290b90b26e6cf596.jpg" alt="Nasi Uduk Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/7605a56a71db60da11d7b73b290b90b26e6cf596.jpg" alt="Nasi Uduk Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Coklat</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Minuman coklat dingin dengan rasa manis creamy yang nikmat.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Minuman coklat dingin dengan rasa manis creamy yang nikmat.</p>
                 </div>
             </div>
             <div class="flex flex-col items-center">
-                <img src="image/menu/8a33fa18dd7f9fa85dad6355e95ce22396bf64f2.jpg" alt="Nasi Kuning Ayam Crispy" class="w-80 h-56 object-cover rounded-t-2xl shadow-md">
-                <div class="bg-amber-100 w-84 text-center py-3 -mt-1 rounded-b-lg shadow">
+                <img src="image/menu/8a33fa18dd7f9fa85dad6355e95ce22396bf64f2.jpg" alt="Nasi Kuning Ayam Crispy" class="object-cover h-56 shadow-md w-80 rounded-t-2xl">
+                <div class="py-3 -mt-1 text-center rounded-b-lg shadow bg-amber-100 w-84">
                     <h3 class="text-lg font-semibold text-gray-800">Es Susu Soda Gembira</h3>
                 </div>
-                <div class="w-84 text-center p-4 mt-2">
-                    <p class="text-gray-600 text-sm">Perpaduan susu kental manis, sirup, dan soda yang segar serta menggugah mood.</p>
+                <div class="p-4 mt-2 text-center w-84">
+                    <p class="text-sm text-gray-600">Perpaduan susu kental manis, sirup, dan soda yang segar serta menggugah mood.</p>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="mx-auto max-w-4xl text-center mt-10">
+        <div class="max-w-4xl mx-auto mt-10 text-center">
             <h1 class="text-5xl font-bold text-[#5B0E04] mb-6">Kamu penasaran gimana rasanya? <br> langsung pesan aja yuk di bawah.</h1>
             <a href="menu.html" class="inline-block bg-[#F9E6B2] text-[#5B0E04] font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:bg-[#a43206] hover:text-white hover:-translate-y-1 duration-300">Pesan sekarang</a>
         </div>
     </section>
-    <footer class="mt-auto pt-10">
+    <footer class="pt-10 mt-auto">
         <div class="max-w-4xl mx-auto text-center text-gray-800">
             <h3 class="text-xl font-bold text-[#5b0e04]">Kontak</h3>
             <p class="mt-2">+62 812-3456-7890</p>
             <a href="mailto:JOKONCHICKEN@GMAIL.COM">JOKONCHICKEN@GMAIL.COM</a>
             <h3 class="mt-6 text-xl font-bold text-[#5b0e04]">Media Sosial</h3>
-            <div class="flex justify-center space-x-6 mt-4 text-2xl">
+            <div class="flex justify-center mt-4 space-x-6 text-2xl">
                 <a href="#" class="hover:text-pink-500"><i class="fab fa-tiktok"></i></a>
                 <a href="#" class="hover:text-rose-500"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="hover:text-blue-500"><i class="fab fa-x-twitter"></i></a>
